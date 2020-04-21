@@ -1,0 +1,7 @@
+"sample"
+{
+	"base"		"nutscript"
+	"title"		"StarWarsRP"
+	"author"	"Chessnut"
+	"menusystem"	"1"
+}

@@ -1,0 +1,9 @@
+ITEM.name = "Thermal Detonator"
+ITEM.desc = "A small, compact grenade."
+ITEM.model = "models/bf2/compiled 0.34/thermaldetonator.mdl"
+ITEM.price = 800
+ITEM.noBusiness = true
+ITEM.weaponCategory = "grenade"
+ITEM.class = "weapon_frag"
+ITEM.width = 1
+ITEM.height = 1
