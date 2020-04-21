@@ -103,6 +103,12 @@ SCHEMA.owRankModels = {
 
 -- The default player data when using /data
 SCHEMA.defaultData = [[
-Points:
-Infractions:
+Suspect Name:
+Sun Cycle (arrest date):
+Arresting Officer:
+Misdemeanors:
+Low-Level Violations:
+Mid-Level Violations:
+High-Level Violations:
+Additional Notes:
 ]]
