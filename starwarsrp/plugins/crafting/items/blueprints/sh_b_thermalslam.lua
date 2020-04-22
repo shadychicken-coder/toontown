@@ -1,7 +1,7 @@
 ITEM.name = "Thermal Slam Blueprint (Illegal)"
 ITEM.price = 12000
 ITEM.permit = "lit"
-ITEM.category = "Blueprints"
+ITEM.category = "Weapon Blueprints"
 ITEM.noBusiness = true
 ITEM.uniqueID = "thermalslam_b"
 ITEM.requirements = {
