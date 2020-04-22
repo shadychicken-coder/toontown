@@ -1,7 +1,7 @@
 ITEM.name = "DH-17 Blaster Pistol (Illegal)"
 ITEM.price = 24000
 ITEM.permit = "lit"
-ITEM.category = "Blueprints"
+ITEM.category = "Weapon Blueprints"
 ITEM.noBusiness = true
 ITEM.uniqueID = "dh17_b"
 ITEM.requirements = {

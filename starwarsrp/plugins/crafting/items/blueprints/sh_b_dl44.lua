@@ -1,7 +1,7 @@
 ITEM.name = "DL-44 Blaster Pistol Blueprint (Illegal)"
 ITEM.price = 21000
 ITEM.permit = "lit"
-ITEM.category = "Blueprints"
+ITEM.category = "Weapon Blueprints"
 ITEM.noBusiness = true
 ITEM.uniqueID = "dl44_b"
 ITEM.requirements = {

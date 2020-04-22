@@ -10,9 +10,24 @@ ENT.Category = "NutScript"
 ENT.invType = "crafttable"
 nut.item.registerInv(ENT.invType, 5, 4)
 
+function ENT:SpawnFunction( ply, tr, ClassName )
+
+    local ent = ents.Create( "nut_craftingtable" )
+    ent:SetCreator( ply )
+    ent:SetPos(tr.HitPos)
+    ent:Spawn()
+
+    ent:Activate()
+
+    
+
+
+    return ent
+end
+
 if (SERVER) then
 	function ENT:Initialize()
-		self:SetModel("models/props_wasteland/controlroom_desk001b.mdl")
+		self:SetModel("models/lt_c/sci_fi/counter.mdl")
 		self:PhysicsInit(SOLID_VPHYSICS)
 		self:SetMoveType(MOVETYPE_VPHYSICS)
 		self:setNetVar("active", false)

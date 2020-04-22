@@ -1,7 +1,7 @@
 ITEM.name = "Thermal Detonator (Illegal)"
 ITEM.price = 10000
 ITEM.permit = "lit"
-ITEM.category = "Blueprints"
+ITEM.category = "Weapon Blueprints"
 ITEM.noBusiness = true
 ITEM.uniqueID = "thermal_detonator_b"
 ITEM.requirements = {
