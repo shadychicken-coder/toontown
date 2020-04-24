@@ -8,7 +8,7 @@ ITEM.requirements = {
 	{"component", 2},
 	{"fusion_cutter", 1},
 	{"databank", 1},
-	{"scrapmetal", 2},
+	{"metalscraps", 3},
 	{"motor", 2},
 
 }

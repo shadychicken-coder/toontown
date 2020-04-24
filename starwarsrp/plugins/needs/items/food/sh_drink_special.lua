@@ -1,0 +1,13 @@
+ITEM.name = "Special Water"
+ITEM.desc = "A blue can of plain water."
+ITEM.model = "models/props_junk/popcan01a.mdl"
+ITEM.healthRestore = 20
+ITEM.restore = 100
+ITEM.skin = 1
+ITEM.price = 75
+ITEM.permit = "food"
+ITEM.category = "Drinks"
+ITEM.uniqueID = "special"
+ITEM.noBusiness = true
+ITEM.hungerAmt = 0
+ITEM.thirstAmt = 35

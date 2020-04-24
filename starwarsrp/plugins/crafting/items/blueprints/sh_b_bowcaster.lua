@@ -6,7 +6,7 @@ ITEM.uniqueID = "bowcaster_b"
 ITEM.noBusiness = true
 ITEM.requirements = {
 	{"largepowercell", 1},
-	{"powercell", 1}
+	{"powercell", 1},
 	{"metalscraps", 2},
 	{"coolant", 2},
 	{"tin", 2},

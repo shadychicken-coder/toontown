@@ -3,6 +3,7 @@ ITEM.desc = "A book."
 ITEM.category = "literature"
 ITEM.model = "models/props_lab/bindergraylabel01b.mdl"
 ITEM.contents = ""
+ITEM.noBusiness = true
 ITEM.functions.Read = {
 	onClick = function(item)
 		local frame = vgui.Create("DFrame")

@@ -10,6 +10,7 @@ ITEM.requirements = {
 	{"databank", 1},
 	{"powercell", 1},
 	{"motor", 1},
+	{"metalscraps", 2},
 
 }
 ITEM.result = {

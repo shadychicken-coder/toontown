@@ -9,7 +9,7 @@ ITEM.requirements = {
 	{"fusion_cutter", 1},
 	{"databank", 1},
 	{"powercell", 1},
-	{"scrapmetal", 3},
+	{"metalscraps", 5},
 	{"motor", 1},
 
 }

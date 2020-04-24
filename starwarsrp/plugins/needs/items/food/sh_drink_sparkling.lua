@@ -1,0 +1,13 @@
+ITEM.name = "Sparkling Water"
+ITEM.desc = "A blue can of plain water."
+ITEM.model = "models/props_junk/popcan01a.mdl"
+ITEM.healthRestore = 15
+ITEM.restore = 67
+ITEM.skin = 2
+ITEM.price = 50
+ITEM.permit = "food"
+ITEM.category = "Drinks"
+ITEM.uniqueID = "sparklingwater"
+ITEM.noBusiness = true
+ITEM.hungerAmt = 0
+ITEM.thirstAmt = 20

@@ -3,4 +3,4 @@ ITEM.desc = "A piece of paper that allows one to bounty hunt. As a bounty hunter
 ITEM.price = 8000
 ITEM.model = "models/props_lab/clipboard.mdl"
 ITEM.category = "Permits"
-
+ITEM.noBusiness = true
