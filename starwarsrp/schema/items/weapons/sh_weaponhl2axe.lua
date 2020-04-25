@@ -1,0 +1,11 @@
+ITEM.name = "Axe"
+ITEM.class = "weapon_hl2axe"
+ITEM.model = "models/weapons/HL2meleepack/w_axe.mdl"
+ITEM.desc = ""
+ITEM.weaponCategory = "secondary"
+ITEM.width = 1
+ITEM.height = 2
+ITEM.noBusiness = true
+ITEM.price = 150
+ITEM.permit = "general"
+ITEM.category = "Tools"

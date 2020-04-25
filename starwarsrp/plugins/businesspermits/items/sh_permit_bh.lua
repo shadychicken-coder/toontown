@@ -1,6 +1,6 @@
-ITEM.name = "Bounty Hunting Permit"
-ITEM.desc = "A piece of paper that allows one to bounty hunt. As a bounty hunter, you are allowed to carry: Weapon x1  Door Slicers x5 Restraining Cuffs x3"
-ITEM.price = 8000
+ITEM.name = "Standard Bounty Hunting Permit"
+ITEM.desc = "A piece of paper that allows one to bounty hunt. As a bounty hunter, you are allowed to carry: Blaster Pistol x1."
+ITEM.price = 6000
 ITEM.model = "models/props_lab/clipboard.mdl"
 ITEM.category = "Permits"
 ITEM.noBusiness = true

@@ -41,7 +41,7 @@ ENT.loottable = {
 	["dewbackstew"] = 2,
 	["kraytdragon"] = 1,
 	["ration"] = 3,
-	["ratmeat"] = 12,
+	["ratmeat"] = 17,
 	["sweetroll"] = 1,
 	["largepowercell"] = 1,
 	["leg"] = 1,
@@ -52,6 +52,11 @@ ENT.loottable = {
 	["junk4"] = 7,
 	["junk5"] = 8,
 	["junk6"] = 9,
+	["weaponhl2axe"] = 2,
+	["weaponhl2hook"] = 2,
+	["weaponhl2pipe"] = 2,
+	["weaponhl2pot"] = 4,
+	["weaponhl2shovel"] = 4,
 	["dl44"] = 1,
 	
 	

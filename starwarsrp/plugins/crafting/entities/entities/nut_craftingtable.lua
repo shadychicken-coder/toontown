@@ -8,7 +8,7 @@ ENT.AdminOnly = true
 ENT.RenderGroup 		= RENDERGROUP_BOTH
 ENT.Category = "NutScript"
 ENT.invType = "crafttable"
-nut.item.registerInv(ENT.invType, 5, 4)
+nut.item.registerInv(ENT.invType, 6, 6)
 
 function ENT:SpawnFunction( ply, tr, ClassName )
 

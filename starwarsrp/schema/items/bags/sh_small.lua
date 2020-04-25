@@ -1,0 +1,10 @@
+ITEM.name = "Small Bag"
+ITEM.desc = "A small bag that does not carry much."
+ITEM.price = 100
+ITEM.invWidth = 3
+ITEM.invHeight = 2
+ITEM.height = 2
+ITEM.witdh = 2
+ITEM.permit = "general"
+ITEM.model = "models/fallout3/backpack_1.mdl"
+ITEM.category = "Bags"

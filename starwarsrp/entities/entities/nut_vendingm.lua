@@ -152,14 +152,14 @@ if (SERVER) then
 		end
 
 		if (button and stocks and stocks[button] and stocks[button] > 0) then
-			local item = "water"
+			local item = "watercan"
 			local price = 5
 
 			if (button == 2) then
-				item = "water_sparkling"
+				item = "sparklingwater"
 				price = price + 10
 			elseif (button == 3) then
-				item = "water_special"
+				item = "special"
 				price = price + 15
 			end
 

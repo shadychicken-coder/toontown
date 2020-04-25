@@ -1,0 +1,12 @@
+ITEM.name = "Shovel"
+ITEM.class = "weapon_hl2shovel"
+ITEM.model = "models/weapons/HL2meleepack/w_shovel.mdl"
+ITEM.desc = ""
+ITEM.weaponCategory = "secondary"
+ITEM.width = 1
+ITEM.height = 3
+ITEM.noBusiness = true
+ITEM.noBusiness = true
+ITEM.price = 110
+ITEM.permit = "general"
+ITEM.category = "Tools"

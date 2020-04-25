@@ -1,0 +1,9 @@
+ITEM.name = "Lightsaber"
+ITEM.class = "weapon_lightsaber"
+ITEM.model = "models/sgg/starwars/weapons/w_common_jedi_saber_hilt.mdl"
+ITEM.desc = "To slice off each others limbs and heads."
+ITEM.holsterDrawInfo = {}
+ITEM.weaponCategory = "melee"
+ITEM.width = 1
+ITEM.height = 2
+ITEM.noBusiness = true

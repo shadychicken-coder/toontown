@@ -1,5 +1,5 @@
 ITEM.name = "WED Treadmill Droid Blueprint"
-ITEM.price = 10000
+ITEM.price = 3000
 ITEM.permit = "lit"
 ITEM.category = "Droid Blueprints"
 ITEM.noBusiness = true
@@ -9,7 +9,8 @@ ITEM.requirements = {
 	{"fusion_cutter", 1},
 	{"databank", 1},
 	{"metalscraps", 3},
-	{"motor", 2},
+	{"motor", 3},
+	{"powercell", 1},
 
 }
 ITEM.result = {

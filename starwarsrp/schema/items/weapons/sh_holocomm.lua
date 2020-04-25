@@ -1,0 +1,9 @@
+ITEM.name = "Holocomm"
+ITEM.class = "holocomm"
+ITEM.model = "models/weapons/w_pistol.mdl"
+ITEM.desc = ""
+ITEM.holsterDrawInfo = {}
+ITEM.weaponCategory = "melee"
+ITEM.width = 1
+ITEM.height = 2
+ITEM.noBusiness = true

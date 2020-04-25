@@ -3,8 +3,8 @@ PLUGIN.name = "Needs"
 PLUGIN.author = "sky"
 PLUGIN.desc = "requires you to eat and drink every so often"
 
-local thirstTime = 310
-local hungerTime = 350
+local thirstTime = 210
+local hungerTime = 250
 local dmgTime = 30
 local healTime = 120
 
