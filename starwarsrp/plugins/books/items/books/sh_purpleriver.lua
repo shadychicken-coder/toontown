@@ -1,5 +1,5 @@
 ITEM.name = "The Way of the Purple River: Book One"
-ITEM.desc = "A black book with a purple river painted on it."
+ITEM.desc = "A datapad with a purple river displayed on it."
 ITEM.price = 25
 ITEM.permit = "lit"
 ITEM.category = "Literature"

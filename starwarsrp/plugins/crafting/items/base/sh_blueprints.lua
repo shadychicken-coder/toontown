@@ -1,5 +1,5 @@
 ITEM.name = "Blueprint Base"
-ITEM.model = "models/props_lab/binderblue.mdl"
+ITEM.model = "models/cire992/props5/datapad01.mdl"
 ITEM.width = 1
 ITEM.height = 1
 ITEM.desc = "Crafting's basic."

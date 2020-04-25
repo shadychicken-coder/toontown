@@ -1,7 +1,7 @@
 ITEM.name = "Book Base"
 ITEM.desc = "A book."
 ITEM.category = "literature"
-ITEM.model = "models/props_lab/bindergraylabel01b.mdl"
+ITEM.model = "models/cire992/props5/datapad01.mdl"
 ITEM.contents = ""
 ITEM.noBusiness = true
 ITEM.functions.Read = {

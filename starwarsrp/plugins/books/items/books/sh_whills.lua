@@ -1,5 +1,5 @@
 ITEM.name = "Journal of the Whills"
-ITEM.desc = "A blue book with a faded symbol on it."
+ITEM.desc = "A datapad with a faded symbol on it."
 ITEM.price = 25
 ITEM.permit = "lit"
 ITEM.category = "Literature"

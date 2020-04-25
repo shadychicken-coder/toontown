@@ -1,24 +1,18 @@
-ITEM.name = "Radio"
-ITEM.model = "models/gibs/shield_scanner_gib1.mdl"
-ITEM.width = 1
-ITEM.height = 1
+ITEM.name = "Broadcaster"
+ITEM.model = "models/props_lab/citizenradio.mdl"
+ITEM.desc = "A large device that allows one to transmit their voice long distances.\n(/broadcast)"
+ITEM.width = 2
+ITEM.height = 2
 ITEM.category = "Communication"
 ITEM.price = 150
-ITEM.noBusiness = true
-ITEM.permit = "elec"
-function ITEM:getDesc()
-	local str
-	
-	if (!self.entity or !IsValid(self.entity)) then
-		str = "A Pager that allows you to send a signal to other characters in distance.\nPower: %s\nFrequency: %s"
-		return Format(str, (self:getData("power") and "On" or "Off"), self:getData("freq", "000.0"))
-	else
-		local data = self.entity:getData()
-		
-		str = "A Functional Pager. Power: %s Frequency: %s"
-		return Format(str, (self.entity:getData("power") and "On" or "Off"), self.entity:getData("freq", "000.0"))
-	end
-end
+ITEM.flag = "v"
+ITEM.uniqueID = "broadcaster"
+
+ITEM.iconCam = {
+	pos = Vector(200, 0, 8),
+	ang = Angle(180, -0, 180),
+	fov = 10,
+}
 
 if (CLIENT) then
 	function ITEM:paintOver(item, w, h)
@@ -57,17 +51,6 @@ ITEM.functions.toggle = { -- sorry, for name order.
 	onRun = function(item)
 		item:setData("power", !item:getData("power", false), player.GetAll(), false, true)
 		item.player:EmitSound("buttons/button14.wav", 70, 150)
-
-		return false
-	end,
-}
-
-ITEM.functions.use = { -- sorry, for name order.
-	name = "Freq",
-	tip = "useTip",
-	icon = "icon16/wrench.png",
-	onRun = function(item)
-		netstream.Start(item.player, "radioAdjust", item:getData("freq", "000,0"), item.id)
 
 		return false
 	end,

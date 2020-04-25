@@ -6,6 +6,7 @@ PLUGIN.definitions = PLUGIN.definitions or {}
 STORAGE_DEFINITIONS = PLUGIN.definitions
 
 nut.util.include("sh_definitions.lua")
+nut.util.include("sh_lootable.lua")
 
 for k, v in pairs(PLUGIN.definitions) do
 	if (v.name and v.width and v.height) then
@@ -22,11 +23,9 @@ nut.config.add("saveStorage", true, "Whether or not storages will save after a s
 
 if (SERVER) then
 	function PLUGIN:PlayerSpawnedProp(client, model, entity)
-		local data = STORAGE_DEFINITIONS[model:lower()]
+		local data = self.definitions[model:lower()]
 
 		if (data) then
-			if (hook.Run("CanPlayerSpawnStorage", client, model, entity) == false) then return end
-			
 			local storage = ents.Create("nut_storage")
 			storage:SetPos(entity:GetPos())
 			storage:SetAngles(entity:GetAngles())
@@ -41,6 +40,8 @@ if (SERVER) then
 					storage:setInventory(inventory)
 				end
 			end)
+			
+			storage:SetCreator(client)
 
 			self:saveStorage()
 			entity:Remove()
@@ -57,12 +58,8 @@ if (SERVER) then
   	for k, v in ipairs(ents.FindByClass("nut_storage")) do
   		if (hook.Run("CanSaveStorage", v, v:getInv()) != false) then
   			if (v:getInv()) then
-  				data[#data + 1] = {v:GetPos(), v:GetAngles(), v:getNetVar("id"), v:GetModel(), v.password}
+  				data[#data + 1] = {v:GetPos(), v:GetAngles(), v:getNetVar("id"), v:GetModel(), v.password, v.lootable, v:getNetVar("name", nil), v:getNetVar("desc", nil)}
 			end
-		else
-			local index = v:getNetVar("id")
-			nut.db.query("DELETE FROM nut_items WHERE _invID = "..index)
-			nut.db.query("DELETE FROM nut_inventories WHERE _invID = "..index)
   		end
   	end
 
@@ -79,8 +76,6 @@ if (SERVER) then
 
 	function PLUGIN:StorageCanTransfer(inventory, client, oldX, oldY, x, y, newInvID)
 		local inventory2 = nut.item.inventories[newInvID]
-
-		print(inventory2)
 	end
 
 	function PLUGIN:LoadData()
@@ -104,14 +99,31 @@ if (SERVER) then
 						storage:setNetVar("locked", true)
 					end
 					
-					nut.item.restoreInv(v[3], data2.width, data2.height, function(inventory)
-						inventory.vars.isStorage = true
+					if(v[6]) then
+						storage.lootable = v[6]
+					end		
+					
+					if(v[7]) then
+						storage:setNetVar("name", v[7])
+					end		
+					
+					if(v[8]) then
+						storage:setNetVar("desc", v[8])
+					end
+					
+					if (type(v[3]) != "number" or v[3] < 0) then
+						ErrorNoHalt("Attempt to restore inventory with an invalid ID!")
+					end
+					
+					if (type(v[3]) == "number" and v[3] >= 0) then
+						nut.item.restoreInv(v[3], data2.width, data2.height, function(inventory)
+							inventory.vars.isStorage = true
+							if (IsValid(storage)) then
+								storage:setInventory(inventory)
+							end
+						end)
+					end
 						
-						if (IsValid(storage)) then
-							storage:setInventory(inventory)
-						end
-					end)
-
 					local physObject = storage:GetPhysicsObject()
 
 					if (physObject) then
@@ -221,6 +233,47 @@ nut.command.add("storagelock", {
 				ent:setNetVar("locked", nil)
 				ent.password = nil
 				client:notifyLocalized("storPassRmv")
+			end
+		else
+			client:notifyLocalized("invalid", "Entity")
+		end
+	end
+})
+
+nut.command.add("storagename", {
+	adminOnly = true,
+	syntax = "[string name]",
+	onRun = function(client, arguments)
+		local trace = client:GetEyeTraceNoCursor()
+		local ent = trace.Entity
+
+		if (ent and ent:IsValid()) then
+			if(ent:GetCreator() == client or client:IsAdmin()) then		
+				local name = table.concat(arguments, " ")
+
+				ent:setNetVar("name", name)
+			else
+				client:notify("You do not own that.")
+			end
+		else
+			client:notifyLocalized("invalid", "Entity")
+		end
+	end
+})
+
+nut.command.add("storagedesc", {
+	syntax = "[string desc]",
+	onRun = function(client, arguments)
+		local trace = client:GetEyeTraceNoCursor()
+		local ent = trace.Entity
+
+		if (ent and ent:IsValid()) then
+			if(ent:GetCreator() == client or client:IsAdmin()) then		
+				local desc = table.concat(arguments, " ")
+
+				ent:setNetVar("desc", desc)
+			else
+				client:notify("You do not own that.")
 			end
 		else
 			client:notifyLocalized("invalid", "Entity")

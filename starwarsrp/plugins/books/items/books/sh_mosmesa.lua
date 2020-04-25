@@ -1,5 +1,5 @@
 ITEM.name = "Mos Mesa Travel Guide"
-ITEM.desc = "A yellow book."
+ITEM.desc = "A yellow datapad."
 ITEM.price = 25
 ITEM.permit = "lit"
 ITEM.category = "Literature"

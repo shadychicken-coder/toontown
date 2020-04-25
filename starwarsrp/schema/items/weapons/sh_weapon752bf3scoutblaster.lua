@@ -1,0 +1,9 @@
+ITEM.name = "Scout Pistol"
+ITEM.class = "weapon_752bf3_scoutblaster"
+ITEM.model = "models/weapons/synbf3/w_scoutblaster.mdl"
+ITEM.desc = "Star Wars! PEW PEW PEW PEW"
+ITEM.weaponCategory = "secondary"
+ITEM.width = 2
+ITEM.height = 1
+ITEM.noBusiness = true
+ITEM.category = "Weapons"

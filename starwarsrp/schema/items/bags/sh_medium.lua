@@ -1,4 +1,4 @@
-ITEM.name = "A medium bag"
+ITEM.name = "Medium Bag"
 ITEM.desc = "A medium-sized bag."
 ITEM.model = "models/fallout 3/backpack_2.mdl"
 ITEM.invWidth = 4
